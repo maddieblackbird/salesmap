@@ -1,7 +1,7 @@
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
-        center: { lat: 37.7749, lng: -122.4194 } // Center on San Francisco
+        center: { lat: 40.7128, lng: -74.0060 } // Center on San Francisco
     });
 
     const zipCodes = ['94103', '94107', '94110']; // List of zip codes to outline
