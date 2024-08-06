@@ -18,10 +18,10 @@ def get_address(restaurant_name, zip_code, api_key):
         return None
 
 # Load CSV data
-df = pd.read_csv('/Users/madelynweber/Code/Sales Territories/Colinterritories.csv')
+df = pd.read_csv('/Users/madelynweber/Code/Sales Territories/SignedLive.csv')
 
 # Apply the updated function to each row
-df['Address'] = df.apply(lambda row: get_address(row['Company Name'], row['Zip Code'], api_key), axis=1)
+df['Address'] = df.apply(lambda row: get_address(row['Company name'], row['Postal Code'], api_key), axis=1)
 
 # Save the updated DataFrame to a new CSV file
-df.to_csv('/Users/madelynweber/Code/Sales Territories/Colinterritories_updated.csv', index=False)
+df.to_csv('/Users/madelynweber/Code/Sales Territories/SignedLive_updated.csv', index=False)
